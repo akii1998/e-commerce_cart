@@ -6,7 +6,7 @@ const Home = () => {
     <div className="hero">
       <div className="card text-white border-0">
         <img
-          src="/assets/bg.webp"
+          src="/assets/bg1.jpg"
           className="card-img"
           alt="BackGround"
           height={"550px"}
