@@ -3,6 +3,7 @@ import Home from "./component/Home/Home";
 import Navbar from "./component/Navbar/Navbar";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Product from "./component/Product/Product";
+import SingleProduct from "./component/SingleProduct/SingleProduct";
 
 const router = createBrowserRouter([
   {
@@ -12,8 +13,10 @@ const router = createBrowserRouter([
   {
     path: "/products",
     element: <Product />,
-  },
-  {
+  },{
+    path:'/products/:id',
+    element:<SingleProduct/>
+  },{
     path: "*",
     element: (
       <div
@@ -28,10 +31,11 @@ const router = createBrowserRouter([
           alt="error"
           height={"500px"}
           width={"700px"}
-        />{" "}
+        />
       </div>
     ),
   },
+ 
 ]);
 
 function App() {
@@ -44,3 +48,7 @@ function App() {
 }
 
 export default App;
+
+
+
+

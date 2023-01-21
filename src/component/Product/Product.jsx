@@ -104,9 +104,9 @@ const Product = () => {
                     <p class="card-text lead fw-bold">
                       Rs {Math.floor(product.price * 82)}
                     </p>
-                    <Link to="#" class="btn btn-outline-dark">
+                    <a href={`/products/${product.id}`} class="btn btn-outline-dark">
                       Buy Now
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
