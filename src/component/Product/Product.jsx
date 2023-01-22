@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './Product.css'
 
 const Product = () => {
@@ -104,9 +104,9 @@ const Product = () => {
                     <p class="card-text lead fw-bold">
                       Rs {Math.floor(product.price * 82)}
                     </p>
-                    <a href={`/products/${product.id}`} class="btn btn-outline-dark">
+                    <NavLink to={`/products/${product.id}`} class="btn btn-outline-dark">
                       Buy Now
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>

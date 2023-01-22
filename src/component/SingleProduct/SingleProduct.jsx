@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { useSelector ,useDispatch } from "react-redux";
 import { addCart ,delCart} from "../../redux/action";
 
@@ -13,9 +13,14 @@ const SingleProduct = () => {
 
 
   const dispatch =useDispatch();
+
   const addProduct=(product)=>{
     dispatch(addCart(product))
   }
+
+   const deleteItem=(product)=>{
+    dispatch(delCart(product))
+   }
 
   useEffect(() => {
     const getProduct = async () => {
@@ -73,9 +78,10 @@ const SingleProduct = () => {
           <button className="btn btn-outline-dark px-4 py-2" onClick={()=>addProduct(product)}>
             Add to Cart
           </button>
-          <a href="/cart" className="btn btn-dark ms-2 px-3 py-2">
+          <NavLink to="/cart" className="btn btn-dark ms-2 px-3 py-2" >
             Go to Cart
-          </a>
+          </NavLink>
+          {/* <button onClick={()=>deleteItem(product)}>Delete</button> */}
         </div>
       </>
     );
