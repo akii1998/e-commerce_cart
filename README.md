@@ -48,7 +48,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ![Login](https://user-images.githubusercontent.com/110331686/214128249-4de03fe0-05cb-4e6a-ab6c-e29675523ae8.png)
 
 ## Registration[page]
-![signup](https://user-images.githubusercontent.com/110331686/214128291-6d8cc320-d62b-4290-a38e-731e3f03ed00.png)
+![regis](https://user-images.githubusercontent.com/110331686/214131700-47d99058-ab22-4602-82b9-73ab4852b574.png)
 
 ## Initial Cart
 ![EmptyCart](https://user-images.githubusercontent.com/110331686/214128361-dc38a7a7-4d1f-40ca-b199-f44e991101ed.png)
