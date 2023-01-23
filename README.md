@@ -22,7 +22,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
     - [ ] Home,Header,Footer,About,Contact,Login,SignUp,Cart
     - [ ] Product,SingleProduct 
   - [ ] redux
-   - [ ] Action,Reducer,Store
+    - [ ] Action,Reducer,Store
 
 
 ### Application Functionality
