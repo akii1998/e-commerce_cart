@@ -37,7 +37,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Filter by Categories
 ![comm3](https://user-images.githubusercontent.com/110331686/214128150-cd025449-2d42-431a-af99-e07e9e69b4ba.png)
-![comm4](https://user-images.githubusercontent.com/110331686/214128158-d0bcb25b-2c91-40af-b94f-6bed2fc3344c.png)
 
 ##  About 
 ![comm5](https://user-images.githubusercontent.com/110331686/214128183-0470dba7-b0c6-4ab3-b5ec-4b8b7ef5044e.png)
