@@ -32,7 +32,7 @@ const Contact = () => {
                   placeholder="Akash Gupta"
                 />
               </div>
-              <div class="mb-3">
+              <div className="mb-3">
                 <label
                   htmlFor="exampleFormControlInput1"
                   className="form-label"
@@ -59,7 +59,7 @@ const Contact = () => {
                   rows="5"
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-outline-primary">
+              <button type="submit" className="btn btn-outline-primary">
                 Send Message
               </button>
             </form>

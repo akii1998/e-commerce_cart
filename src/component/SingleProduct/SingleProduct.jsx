@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
 import { NavLink, useParams } from "react-router-dom";
 import { useSelector ,useDispatch } from "react-redux";
-import { addCart ,delCart} from "../../redux/action";
+import { addItem ,delItem} from "../../redux/action";
 
 const SingleProduct = () => {
   const { id } = useParams();
@@ -16,16 +16,11 @@ const SingleProduct = () => {
 
   const[cartBtn ,setCartBtn] =useState("Add to Cart");
 
+  // we need to store useDispatch in a  variable 
 
   const dispatch =useDispatch();
 
-  const addProduct=(product)=>{
-    dispatch(addCart(product))
-  }
 
-   const deleteItem=(product)=>{
-    dispatch(delCart(product))
-   }
 
   useEffect(() => {
     const getProduct = async () => {
@@ -57,18 +52,20 @@ const SingleProduct = () => {
   };
   const handleCart=(product)=>{
     if(cartBtn==="Add to Cart"){
+    dispatch(addItem(product))
       setCartBtn("Remove from Cart")
 
     }
     else{
+      dispatch(delItem(product))
       setCartBtn("Add to Cart");
     }
    
   }
   const ShowProduct = () => {
     return (
-      <>
-        <div className="product col-md-6">
+      <div key={product.id}>
+        <div className="product col-md-6" >
           <img
             src={product.image}
             alt={product.title}
@@ -96,9 +93,8 @@ const SingleProduct = () => {
           <NavLink to="/cart" className="btn btn-dark ms-2 px-3 py-2" >
             Go to Cart
           </NavLink>
-          {/* <button onClick={()=>deleteItem(product)}>Delete</button> */}
         </div>
-      </>
+      </div>
     );
   };
 

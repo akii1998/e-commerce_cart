@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { delCart } from '../../redux/action'
+import { NavLink } from 'react-router-dom'
+import { delItem } from '../../redux/action'
   
 const Cart = () => {
 
@@ -8,10 +9,10 @@ const Cart = () => {
    const dispatch =useDispatch();
    
    const handleClose=(item)=>{
-   dispatch(delCart(item))
+   dispatch(delItem(item))
    }
 
-   const cartItem=(cartItem)=>{
+   const cartItems=(cartItem)=>{
      return(
       <>
       <div className="px-4 my-5 bh-light rounded-3" key={cartItem.id}>
@@ -38,7 +39,7 @@ const Cart = () => {
    }
    const emptyCart=()=>{
     return(
-      <div className="px-4 my-5 bh-light rounded-3" >
+      <div className="px-4 my-5 bh-light rounded-3 py-5" >
         <div className="container py-4">
           <div className="row">
           <h3>Your Cart is Empty</h3> </div>
@@ -46,10 +47,22 @@ const Cart = () => {
         </div>
     )
    }
+
+   const buttonClick=()=>{
+    return(
+      <div className='container '>
+      <div className="row">
+        <NavLink  to="/checkout" className="btn btn-outline-primary mb-5 w-25 mx-auto">Proceed To Checkout </NavLink>
+      </div>
+
+      </div>
+    )
+   }
   return (
     <>
-      {Object.values(state).reduce((p,c)=>p+c,0)?.length ===0 && emptyCart()}   
-       {(Object.values(state).reduce((p,c)=>p+c,0))?.length!==0 && Object.values(state)?.map(cartItem)}  
+       {state.length ===0 && emptyCart()}
+       {state.length!==0 && state.map(cartItems)}
+       {state.length!==0 && buttonClick()}
      </>
   )
 }

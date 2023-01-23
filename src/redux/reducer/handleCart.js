@@ -1,3 +1,43 @@
+
+const addItem =[];
+
+const handleCart=(state=addItem ,action)=>{
+    switch(action.type){
+        case "ADDITEM": return [
+            ...state,
+            action.payload
+        ]
+        case "DELITEM":
+            return state =state.filter((x)=>{
+                return x.id !==action.payload.id
+            })
+
+        default : return state;
+    }
+}
+export default handleCart;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const cart = {};
 
 // const handleCart = (state = cart, action) => {
@@ -51,23 +91,3 @@
 //   }
 // };
 // export default handleCart;
-
-
-
-const addItem =[];
-
-const handleCart=(state=addItem ,action)=>{
-    switch(action.type){
-        case "ADDITEM": return [
-            ...state,
-            action.payload
-        ]
-        case "DELITEM":
-            return state =state.filter((x)=>{
-                return x.id !==action.payload.id
-            })
-
-        default : return state;
-    }
-}
-export default handleCart;

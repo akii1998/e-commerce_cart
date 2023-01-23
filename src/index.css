@@ -17,6 +17,8 @@ code {
 }
 .navbar-brand{
   letter-spacing: 3px;
+  /* text-align: center; */
+  align-self: center;
 }
 
 
