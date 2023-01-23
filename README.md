@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ### Application components
 - [ ] assets/public
 - [ ] src
-  -[ ] component 
+  - [ ] component 
     - [ ] Home,Header,Footer,Product,SingleProduct,About,Contact,Login,SignUp,Cart
   -[ ] redux
    - [ ] Action,Reducer,Store
