@@ -12,6 +12,11 @@ const SingleProduct = () => {
   const [loading, setLoading] = useState(false);
 
 
+  // for change the text of addCart
+
+  const[cartBtn ,setCartBtn] =useState("Add to Cart");
+
+
   const dispatch =useDispatch();
 
   const addProduct=(product)=>{
@@ -50,10 +55,20 @@ const SingleProduct = () => {
       </>
     );
   };
+  const handleCart=(product)=>{
+    if(cartBtn==="Add to Cart"){
+      setCartBtn("Remove from Cart")
+
+    }
+    else{
+      setCartBtn("Add to Cart");
+    }
+   
+  }
   const ShowProduct = () => {
     return (
       <>
-        <div className="col-md-6">
+        <div className="product col-md-6">
           <img
             src={product.image}
             alt={product.title}
@@ -75,8 +90,8 @@ const SingleProduct = () => {
             Rs {Math.floor(product.price * 82)}
           </h3>
           <p className="lead">{product.description}</p>
-          <button className="btn btn-outline-dark px-4 py-2" onClick={()=>addProduct(product)}>
-            Add to Cart
+          <button className="btn btn-outline-dark px-4 py-2" onClick={()=>handleCart(product)}>
+            {cartBtn}
           </button>
           <NavLink to="/cart" className="btn btn-dark ms-2 px-3 py-2" >
             Go to Cart
