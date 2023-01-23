@@ -4,28 +4,28 @@ const Login = () => {
   return (
     <>
       <div>
-        {/* <!-- Button trigger modal -->
+        {/* <!-- Button trigger modal --> */}
         <button
           type="button"
           className="btn btn-outline-primary ms-auto"
           data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
+          data-bs-target="#loginModal"
         >
-          Login
-        </button> */}
+         <span className="fa fa-sign-in me-1"></span> Login
+        </button>
 
         {/* <!-- Modal --> */}
         <div
           className="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
+          id="loginModal"
+          tabIndex="-1"
+          aria-labelledby="loginModalLabel"
           aria-hidden="true"
         >
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-                <h5 className="modal-title fs-5" id="exampleModalLabel">
+                <h5 className="modal-title fs-5" id="loginModalLabel">
                   Login{" "}
                 </h5>
                 <button
@@ -36,12 +36,15 @@ const Login = () => {
                 ></button>
               </div>
               <div className="modal-body">
-                <button className="btn btn-primary w-100 mb-2">
+                <button className="btn btn-primary w-100 mb-4">
                   <span className="fa fa-google me-2"></span>Sign in With Google
+                </button>
+                <button className="btn btn-primary w-100 mb-2">
+                  <span className="fa fa-facebook me-2"></span>Sign in With Facebook
                 </button>
                 <form>
                   <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="htmlhtmlForm-label">
+                    <label htmlFor="exampleInputEmail1" className="Form-label">
                       Email address
                     </label>
                     <input
@@ -74,7 +77,7 @@ const Login = () => {
                       Check me out
                     </label>
                   </div>
-                  <button type="submit" className="btn btn-outline-primary w-100">
+                  <button type="submit" className="btn btn-outline-primary w-100 mt-5">
                     Submit
                   </button>
                 </form>

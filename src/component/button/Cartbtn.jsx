@@ -1,9 +1,16 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { NavLink } from 'react-router-dom';
 
-const Cartbtn = () => {
+const CartBtn = () => {
+    const state =useSelector((state)=>state.handleCart);
   return (
-    <div>Cartbtn</div>
+    <div>
+        <NavLink to='/cart' className='btn btn-outline-primary ms-2'>
+            <span className='fa fa-shopping-cart me-1'></span>Cart(0)
+        </NavLink>
+    </div>
   )
 }
 
-export default Cartbtn
+export default CartBtn

@@ -89,8 +89,8 @@ const Product = () => {
         {filter.map((product) => {
           return (
             <>
-              <div className="col-md-3 mb-4">
-                <div class="card h-100 text-center p-4" key={product.id}>
+              <div className="col-md-3 mb-4" style={{width:"18rem"}}>
+                <div class="card h-100 text-center p-2" key={product.id}>
                   <img
                     src={product.image}
                     class="card-img-top"
@@ -126,7 +126,7 @@ const Product = () => {
             <hr />
           </div>
         </div>
-        <div className="row justify-content-center">
+        <div className="row justify-content-around">
           {loading ? <Loading /> : <ShowProducts />}
         </div>
       </div>
