@@ -19,8 +19,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 - [ ] assets/public
 - [ ] src
   - [ ] component 
-    - [ ] Home,Header,Footer,Product,SingleProduct,About,Contact,Login,SignUp,Cart
-  -[ ] redux
+    - [ ] Home,Header,Footer,About,Contact,Login,SignUp,Cart
+    - [ ] Product,SingleProduct 
+  - [ ] redux
    - [ ] Action,Reducer,Store
 
 
