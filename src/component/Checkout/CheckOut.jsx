@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { NavLink } from 'react-router-dom';
 
 const CheckOut = () => {
     const state =useSelector((state)=>state.handleCart)
@@ -189,7 +190,10 @@ const CheckOut = () => {
           </div>
 
           <hr className="my-4"/>
+          <NavLink to='/'>
           <button className="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+          </NavLink>
+         
         </form>
       </div>
     </div> 
