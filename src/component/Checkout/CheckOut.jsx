@@ -190,9 +190,7 @@ const CheckOut = () => {
           </div>
 
           <hr className="my-4"/>
-          <NavLink to='/'>
           <button className="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
-          </NavLink>
          
         </form>
       </div>
