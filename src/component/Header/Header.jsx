@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Login from "../button/Login";
-import SignUp from "../button/SignUp";
-import CartBtn from "../button/CartBtn";
+import Login from "../CustomButton/Login";
+import SignUp from "../CustomButton/SignUp";
+import CartBtn from "../CustomButton/CartBtn";
 
 const Header = () => {
   return (
