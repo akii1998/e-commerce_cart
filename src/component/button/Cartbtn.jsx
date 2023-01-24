@@ -4,7 +4,9 @@ import { NavLink } from "react-router-dom";
 
 const CartBtn = () => {
   //we  get a state  of handle Cart
+
   // we write reducer file on call the state --> state => state.handleCart {handleCart is file }
+  
   const state = useSelector((state) => state.handleCart);
   return (
     <div>
